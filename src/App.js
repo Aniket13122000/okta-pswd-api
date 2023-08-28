@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import Take_id from './component/Take_id';
+import Take_pswd from './component/Take_pswd';
+import { Routes, Route, NavLink } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Routes>
+     <Route path="/" element={<Take_id />} />
+    <Route path='/getpswd' element={<Take_pswd/>}/>
+     </Routes>
     </div>
   );
 }
